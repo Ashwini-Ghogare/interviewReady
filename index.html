@@ -158,6 +158,36 @@
         </article>
     </div>
 </section>
+<section>
+    <h2>AI Mock Interview</h2>
+
+    <p id="mock-question">
+        Click Start Mock Interview to get your first question.
+    </p>
+
+    <button id="start-interview">
+        Start Mock Interview
+    </button>
+</section>
+<script>
+const questions = [
+    "Tell me about yourself.",
+    "Why do you want to become a Full Stack Developer?",
+    "Explain your Java Full Stack project."
+];
+
+let questionIndex = 0;
+
+document.getElementById("start-interview").addEventListener("click", function() {
+
+    document.getElementById("mock-question").textContent =
+        questions[questionIndex];
+
+    questionIndex = (questionIndex + 1) % questions.length;
+
+    this.textContent = "Next Question";
+});
+</script>
 
 </body>
 </html>
