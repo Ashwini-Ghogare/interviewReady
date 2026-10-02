@@ -169,7 +169,10 @@
         Start Mock Interview
     </button>
 </section>
+<p id="progress">Question 0 of 3</p>
 <script>
+    document.getElementById("progress").textContent =
+"Question " + (questionIndex + 1) + " of " + questions.length;
     <p id="timer">Time: 30 seconds</p>
 const questions = [
     "Tell me about yourself.",
