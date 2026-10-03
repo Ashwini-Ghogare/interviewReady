@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>InterviewReady</title>
-    <meta name="description" content="InterviewReady helps final-year students practice interview questions and prepare with confidence.">
-    <button>Start Preparing</button>
+
+    <meta name="description"
+        content="InterviewReady helps final-year students practice interview questions and prepare with confidence.">
 </head>
 
 <body>
 
+    <!-- Header -->
     <header>
+
         <h2>InterviewReady</h2>
 
-        <nav>
+        <nav aria-label="Main Navigation">
             <a href="#home">Home</a>
             <a href="#benefits">Benefits</a>
             <a href="#waitlist">Waitlist</a>
         </nav>
+
     </header>
 
 
@@ -31,10 +37,11 @@
             <h1>Practice Interviews with AI.</h1>
 
             <p>
-                InterviewReady helps final-year students practice interview questions, improve their answers, and prepare with confidence.
+                InterviewReady helps final-year students practice interview
+                questions, improve their answers, and prepare with confidence.
             </p>
 
-           
+            <button>Start Preparing</button>
 
         </section>
 
@@ -64,31 +71,38 @@
             <h2>Why Practice with InterviewReady?</h2>
 
             <article>
+
                 <h3>1. Realistic Interview Questions</h3>
 
                 <p>
-                    Practice common HR, behavioral, project, and technical questions in a structured interview-style session.
+                    Practice common HR, behavioral, project, and technical
+                    questions in a structured interview-style session.
                 </p>
+
             </article>
 
 
             <article>
+
                 <h3>2. Clearer Answers</h3>
 
                 <p>
                     Practice making your explanations more concise,
                     structured, and easier to communicate.
                 </p>
+
             </article>
 
 
             <article>
+
                 <h3>3. Focused Preparation</h3>
 
                 <p>
                     Identify areas that need more practice and
                     prepare with a clear focus.
                 </p>
+
             </article>
 
         </section>
@@ -110,100 +124,156 @@
 
         </section>
 
+
+        <!-- About Section -->
+        <section id="about">
+
+            <h2>About InterviewReady</h2>
+
+            <p>
+                InterviewReady is a proposed interview-practice tool
+                designed to help final-year students prepare with
+                structured practice.
+            </p>
+
+        </section>
+
+
+        <!-- Practice Areas -->
+        <section class="section wrap">
+
+            <h2>Practice Areas</h2>
+
+            <p class="section-intro">
+                Prepare for different parts of a real interview in one place.
+            </p>
+
+
+            <div class="benefits">
+
+                <article class="card">
+
+                    <div class="num">01</div>
+
+                    <h3>HR Round</h3>
+
+                    <p>
+                        Practice introduction, strengths, weaknesses,
+                        career goals, and common HR questions.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="num">02</div>
+
+                    <h3>Technical Round</h3>
+
+                    <p>
+                        Revise programming, database, framework,
+                        and role-specific technical questions.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="num">03</div>
+
+                    <h3>Project Round</h3>
+
+                    <p>
+                        Practice explaining your project, technologies,
+                        responsibilities, and challenges clearly.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI Mock Interview -->
+        <section>
+
+            <h2>AI Mock Interview</h2>
+
+            <p id="mock-question">
+                Click Start Mock Interview to get your first question.
+            </p>
+
+            <button id="start-interview">
+                Start Mock Interview
+            </button>
+
+            <p id="progress">
+                Question 0 of 3
+            </p>
+
+            <p id="timer">
+                Time: 30 seconds
+            </p>
+
+        </section>
+
     </main>
 
 
     <!-- Footer -->
     <footer>
 
-        <p>© 2026 InterviewReady</p>
-
-        <p>Interview practice for final-year students</p>
-
-    </footer>
-    <!-- About Section -->
-<section id="about">
-
-    <h2>About InterviewReady</h2>
-
-    <p>
-        InterviewReady is a proposed interview-practice tool
-        designed to help final-year students prepare with
-        structured practice.
-    </p>
-
-</section>
-<section class="section wrap">
-    <h2>Practice Areas</h2>
-    <p class="section-intro">
-        Prepare for different parts of a real interview in one place.
-    </p>
-
-    <div class="benefits">
-        <article class="card">
-            <div class="num">01</div>
-            <h3>HR Round</h3>
-            <p>Practice introduction, strengths, weaknesses, career goals, and common HR questions.</p>
-        </article>
-
-        <article class="card">
-            <div class="num">02</div>
-            <h3>Technical Round</h3>
-            <p>Revise programming, database, framework, and role-specific technical questions.</p>
-        </article>
-
-        <article class="card">
-            <div class="num">03</div>
-            <h3>Project Round</h3>
-            <p>Practice explaining your project, technologies, responsibilities, and challenges clearly.</p>
-        </article>
-    </div>
-</section>
-<section>
-    <h2>AI Mock Interview</h2>
-
-    <p id="mock-question">
-        Click Start Mock Interview to get your first question.
-    </p>
-
-    <button id="start-interview">
-        Start Mock Interview
-    </button>
-</section>
-<p id="progress">Question 0 of 3</p>
-<script>
-    document.getElementById("progress").textContent =
-"Question " + (questionIndex + 1) + " of " + questions.length;
-    <p id="timer">Time: 30 seconds</p>
-const questions = [
-    "Tell me about yourself.",
-    "Why do you want to become a Full Stack Developer?",
-    "Explain your Java Full Stack project."
-];
-
-let questionIndex = 0;
-
-document.getElementById("start-interview").addEventListener("click", function() {
-
-    document.getElementById("mock-question").textContent =
-        questions[questionIndex];
-
-    questionIndex = (questionIndex + 1) % questions.length;
-
-    this.textContent = "Next Question";
-});
-</script>
-<footer>
-
         <h3>InterviewReady</h3>
 
-        <p>Practice today. Interview with confidence.</p>
+        <p>
+            Practice today. Interview with confidence.
+        </p>
 
-        <p>© 2026 InterviewReady. All rights reserved.</p>
+        <p>
+            © 2026 InterviewReady. All rights reserved.
+        </p>
 
-        <p>Built for final-year students and job seekers.</p>
+        <p>
+            Built for final-year students and job seekers.
+        </p>
 
     </footer>
 
+
+    <!-- JavaScript -->
+    <script>
+
+        const questions = [
+            "Tell me about yourself.",
+            "Why do you want to become a Full Stack Developer?",
+            "Explain your Java Full Stack project."
+        ];
+
+        let questionIndex = 0;
+
+
+        document
+            .getElementById("start-interview")
+            .addEventListener("click", function () {
+
+                document.getElementById("mock-question").textContent =
+                    questions[questionIndex];
+
+                questionIndex =
+                    (questionIndex + 1) % questions.length;
+
+                document.getElementById("progress").textContent =
+                    "Question " + questionIndex + " of " + questions.length;
+
+                this.textContent = "Next Question";
+
+            });
+
+    </script>
+
 </body>
+
 </html>
